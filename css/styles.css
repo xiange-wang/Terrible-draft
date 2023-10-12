@@ -1,0 +1,94 @@
+#choropleth_map {
+	top:10px;
+	bottom: 100px; 
+	left: 10px;
+	right: 100px;
+	/*height: 1000px;
+	width: 800px;*/
+	border: 2px solid #E0E0E0;
+	padding: 10px;
+}
+
+#bar_chart {
+	top:20px;
+	bottom: 100px; 
+	left: 10px;
+	right: 100px;
+	/*height: 1000px;
+	width: 800px;*/
+	border: 2px solid #E0E0E0;
+	padding: 10px;
+}
+
+/* front in HTML */
+h1{font-family: 'Fredericka the Great', cursive;}
+p{font-family: 'Roboto', sans-serif;}
+p {
+    text-align: justify;
+    columns: 2;
+    line-height: 20px;
+ }
+/* Text Alignment in HTML */
+
+.l-align {
+    text-align: left;
+    border: 1px solid black;
+    /* to set the border*/
+}
+
+.c-align {
+    text-align: center;
+    border: 1px solid black;
+    /* to set the border*/
+}
+
+.r-align {
+    text-align: right;
+    border: 1px solid black;
+    /* to set the border*/
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+	justify-content: flex-start;
+}
+
+/* Background in HTML */
+
+.bg-h1 {
+    background-color: #2D4B65;
+    color: white;
+	height: 100px;      /*Set the height of the block*/
+    display: flex;       /*Convert .bg-h1 into a flex container*/
+    align-items: center; /* Vertically center the content inside the block */
+    justify-content: center; /* Horizontally center the content (if you also want to center it horizontally) */
+	margin: 0;          /*delete space*/
+}
+
+.chart-text {
+    color: black;  /* Text color, adjust based on your design */
+    font-size: 18px;  /* Font size */
+    margin-top: 10px;  /* Space between the chart and the text */
+}
+
+.bg-para {
+    background-color: #B0C6CF;
+}
+body {
+    background-color: #B0C6CF;
+    padding-left: 300px;  /* Space on the left side of the text */
+    padding-right: 300px;  /* Space on the right side of the text */
+    margin: 0;          /*delete space*/
+    border: 1px solid black;
+}
+
+/* Text color in HTML */
+.color1 {
+    color: #2590c8;
+}
+
+.color2 {
+    color: #d13141;
+}

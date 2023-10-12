@@ -1,0 +1,43 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 830,
+    "height": 500,
+    "title": "GDP of each country(2016)",
+    "data": {"url": "data/world_consumption2016.csv"},
+
+    "params": [
+        {
+            "name": "value_select",
+            "value": 1,
+            "bind": {
+              "input": "range",
+              "min": 1,
+              "max": 10,
+              "step": 0.1,
+              "name": "GDP more than (trillions USD):  "
+            }
+        }
+    ],
+    "transform": 
+    [
+        {"calculate": "datum.gdp / 1000000000000", "as": "gdp_in_trillions"},
+        {"filter": "datum.gdp_in_trillions >= value_select"}
+    ],
+
+    "mark": "bar",
+    "encoding": {
+        "y": {"field":"country",  "sort": "-x", "title": "Country or Region"},
+        "x": {
+            "field": "gdp_in_trillions",
+            "type": "quantitative",
+            "axis": {
+                "format": ".2~s"
+            },
+            "title": "GDP (in Trillions)"
+        },
+        "tooltip": [
+            {"field": "country", "type": "nominal"},
+            {"field": "gdp_in_trillions", "type": "quantitative", "title": "GDP (in Trillions)"}
+        ]
+    }
+}

@@ -1,0 +1,73 @@
+Kind of Energy,Energy Consumption,Percentage,Country/Region
+coal,185.147,5.59%,Brazil
+gas,370.879,11.20%,Brazil
+oil,1341.947,40.53%,Brazil
+biofuel,201.393,6.08%,Brazil
+hydro,957.913,28.93%,Brazil
+nuclear,39.896,1.21%,Brazil
+other_renewable,129.096,3.90%,Brazil
+solar,0.214,0.01%,Brazil
+wind,84.218,2.54%,Brazil
+coal,21970.171,62.30%,China
+gas,2094.413,5.94%,China
+oil,6807.743,19.31%,China
+biofuel,26.189,0.07%,China
+hydro,2900.231,8.22%,China
+nuclear,536.1,1.52%,China
+other_renewable,156.256,0.44%,China
+solar,167.304,0.47%,China
+wind,605.715,1.72%,China
+coal,889.936,23.52%,Germany
+gas,848.848,22.44%,Germany
+oil,1323.32,34.98%,Germany
+biofuel,31.334,0.83%,Germany
+hydro,51.67,1.37%,Germany
+nuclear,212.837,5.63%,Germany
+other_renewable,128.514,3.40%,Germany
+solar,95.809,2.53%,Germany
+wind,200.992,5.31%,Germany
+coal,4682.363,56.06%,India
+gas,507.91,6.08%,India
+oil,2540.975,30.42%,India
+biofuel,1.919,0.02%,India
+hydro,322.853,3.87%,India
+nuclear,95.305,1.14%,India
+other_renewable,62.409,0.75%,India
+solar,29.061,0.35%,India
+wind,109.275,1.31%,India
+coal,1394.891,26.96%,Japan
+gas,1164.175,22.50%,Japan
+oil,2213.772,42.78%,Japan
+biofuel,0.0,0.00%,Japan
+hydro,186.283,3.60%,Japan
+nuclear,44.457,0.86%,Japan
+other_renewable,46.853,0.91%,Japan
+solar,108.955,2.11%,Japan
+wind,15.337,0.30%,Japan
+coal,1037.978,12.99%,Russia
+gas,4206.467,52.65%,Russia
+oil,1782.957,22.32%,Russia
+biofuel,0.0,0.00%,Russia
+hydro,464.261,5.81%,Russia
+nuclear,494.445,6.19%,Russia
+other_renewable,1.121,0.01%,Russia
+solar,1.178,0.01%,Russia
+wind,0.372,0.00%,Russia
+coal,3960.744,15.50%,United States
+gas,7490.995,29.31%,United States
+oil,9977.21,39.03%,United States
+biofuel,411.458,1.61%,United States
+hydro,663.312,2.60%,United States
+nuclear,2132.795,8.34%,United States
+other_renewable,208.03,0.81%,United States
+solar,139.37,0.55%,United States
+wind,576.606,2.26%,United States
+coal,43195.639,28.24%,World
+gas,35590.036,23.27%,World
+oil,51920.156,33.95%,World
+biofuel,944.501,0.62%,World
+hydro,10091.741,6.60%,World
+nuclear,6575.951,4.30%,World
+other_renewable,1377.77,0.90%,World
+solar,825.45,0.54%,World
+wind,2423.694,1.58%,World

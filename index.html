@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.22.1"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.5.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.21.0"></script>
+  
+  <!-- CSS file -->
+  <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
+
+  <!-- text font css-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Roboto&display=swap" rel="stylesheet">
+
+  <title>My vislization2</title>
+
+</head>
+<body>
+  <h1 class="bg-h1">Data Visualization2</h1>
+  <div class="container">
+    <div id="choropleth_map"></div>
+    <p class = "chart-text">
+      GDP, or Gross Domestic Product, is a measure of the market value of all final 
+      goods and services produced within a country or region over a specific period.
+      It is commonly used as an indicator of a nation's economic health and its rate
+       of economic growth.
+      <br><br>
+      Energy consumption is an integral part of economic activities, as it provides 
+      the necessary power for various production and service operations. There's a 
+      close link between GDP and energy consumption. Typically, economic growth is 
+      accompanied by an increase in energy demand because producing more goods and 
+      services requires more energy. 
+  </p>
+    <div id="bar_chart"></div>
+    <hr>
+    <p class = "chart-text">
+      The ranking of GDP signifies a country's economic stature and influence on the 
+      global stage. It offers a comparative snapshot of nations' economic health and 
+      their capacity to produce goods and services. A higher GDP rank often correlates 
+      with increased global influence, better living standards, and advanced infrastructure. 
+      <br><br>
+      However, with technological advancements and improvements in energy efficiency, 
+      some countries might experience economic growth while reducing their energy consumption. 
+      In essence, the relationship between GDP and energy consumption highlights the 
+      balance and interplay between economic development and resource utilization.
+  </p>
+  <div id="pie_chart"></div>
+  <hr>
+  <p class = "chart-text">
+    Energy mix represents the proportion of various energy sources in a country's total 
+    energy consumption. This composition is crucial as it reflects a nation's energy security, 
+    environmental impact, and economic stability. A diversified energy mix reduces dependence 
+    on a single source, thus mitigating risks associated with supply disruptions. Moreover, a 
+    shift towards renewable sources indicates a commitment to sustainable development and a 
+    decrease in greenhouse gas emissions. Analyzing the energy mix aids policymakers in setting 
+    strategic priorities and addressing future energy needs.
+    <br><br>
+    The potential for change in the energy landscape is vast, driven by technological advancements, 
+    environmental concerns, and market dynamics. With increasing global awareness about climate change, 
+    there's a push towards cleaner energy sources like wind, solar, and hydroelectric power. Breakthroughs 
+    in battery storage and smart grids can revolutionize the way energy is stored and distributed. Additionally, 
+    geopolitical factors and economic incentives can accelerate the transition from fossil fuels. However, this 
+    change also poses challenges, such as infrastructure adaptation and job displacement, which need careful consideration.
+</p>
+  </div>
+  
+<script type="text/javascript">
+
+  var spec1 = "js/gdp_map.vg.json";
+  vegaEmbed('#choropleth_map', spec1).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+
+  var spec2 = "js/gdp_bar.vg.json";
+  vegaEmbed('#bar_chart', spec2).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+
+  var spec3 = "js/graph_3.vg.json";
+  vegaEmbed('#pie_chart', spec3).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+</script>
+
+</body>
+</html>

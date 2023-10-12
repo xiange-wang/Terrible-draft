@@ -1,0 +1,111 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {"text": ""},
+  "params": [
+    {
+      "name": "country_select",
+      "value": "World",
+      "bind": {
+        "input": "select",
+        "options": [
+          "World",
+          "United States",
+          "Brazil",
+          "China",
+          "Japan",
+          "Germany",
+          "India",
+          "Russia"
+        ],
+        "labels": [
+          "World",
+          "United States",
+          "Brazil",
+          "China",
+          "Japan",
+          "Germany",
+          "India",
+          "Russia"
+        ],
+        "name": "country :"
+      }
+    }
+  ],
+  "hconcat": [
+    {
+      "title": "Percentage of Energy",
+      "width": 375,
+      "height": 275,
+      "data": {"url": "data/energy_consumption_2016.csv"},
+      "layer": [
+        {
+          "mark": {"type": "arc", "innerRadius": 60, "outerRadius": 110},
+          "encoding": {"color": {"field": "Kind of Energy", "type": "nominal"}}
+        },
+        {
+          "mark": {"type": "text", "radius": 140, "align": "center", "baseline": "middle"},
+          "encoding": {
+            "text": {"field": "Kind of Energy"},
+            "theta": {"field": "Energy Consumption", "type": "quantitative", "stack": true},
+            "angle": {"value": 0}
+          }
+        }
+      ],
+      "encoding": {
+        "theta": {
+          "field": "Energy Consumption",
+          "type": "quantitative",
+          "stack": true
+        },
+        "tooltip": [
+          {"field": "Country/Region", "title": "Country/Region"},
+          {"field": "Kind of Energy"},
+          {"field": "Energy Consumption"}
+        ]
+      },
+      "transform": [{"filter": "datum['Country/Region'] == country_select"}]
+    },
+    {
+      "title": "Top 10 Most Valuable Companies",
+      "width": 375,
+      "height": 200,
+      "data": {"url": "data/top10_company.csv"},
+      "mark": {"type": "bar"},
+      "encoding": {
+        "y": {"field": "Valuation (Billion USD)", "type": "quantitative"},
+        "x": {
+          "field": "Company", "type": "ordinal", "sort": "-y", 
+          "axis": {"labelAngle": -30, "labelLimit": 100}
+        },
+        "color": {
+          "field": "Sector",
+          "type": "nominal",
+          "scale": {
+            "range": [
+              "#a2001d",
+              "#d80128",
+              "#ff9812",
+              "#ffda43",
+              "#dbc9b8",
+              "#acabb1",
+              "#338af4",
+              "#0052b4",
+              "#002266",
+              "#751a46"
+            ]
+          },
+          "legend": {
+            "orient": "bottom",
+            "columns": 9
+          }
+        },
+        "tooltip": [
+          {"field": "Company"},
+          {"field": "Valuation (Billion USD)"},
+          {"field": "Country"}
+        ]
+      },
+      "transform": [{"filter": "datum.Country == country_select"}]
+    }
+  ]
+}
